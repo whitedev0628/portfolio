@@ -1,0 +1,263 @@
+{
+  "name": "Robert Barrett",
+  "title": "Senior AI Workflow Engineer",
+  "headline": "I design and ship production workflows that turn operational work into reliable agents, copilots, integrations, and governance.",
+  "location": "Orlando, FL",
+  "availability": "Open to senior AI workflow roles",
+  "email": "robertbarrett0809@outlook.com",
+  "phone": "+1 (213) 529-2003",
+  "resumeLabel": "Resume (PDF)",
+  "resumeHref": "/Robert-Barrett-Resume.pdf",
+  "links": [],
+  "aboutLead": "Nine years turning operational work into software people can run.",
+  "about": [
+    "I’m a senior AI workflow engineer with nine years of experience across AI systems, SaaS automation, data pipelines, APIs, and enterprise platforms. Most recently at OpenTeams, I built production workflows that route requests, draft CRM updates, and give revenue and support teams a cleaner view of what needs a decision.",
+    "I came up through software engineering. I started on platform tools and integration services at IBM in Tulsa, then spent three years at SumatoSoft rebuilding customer workflow services, API connectors, and the observability around them. That path left me with a habit I still use: treat an automation like any other production dependency — owned, measured, and safe to change.",
+    "These days most of my time goes to the less visible parts of AI operations: intake rules, human review, audit trails, retries, and the handoff between operators and software. I like sitting with the people who do the work, then shipping something they can trust on a busy week."
+  ],
+  "stats": [
+    {
+      "value": "9+ years",
+      "label": "Building production software, the recent years in AI workflow and automation"
+    },
+    {
+      "value": "18",
+      "label": "SaaS, CRM, support, and data tools orchestrated in production workflows"
+    },
+    {
+      "value": "34 hrs",
+      "label": "Returned to GTM teams each month by replacing manual account handoffs"
+    },
+    {
+      "value": "5 → 2",
+      "label": "GTM intake handoffs after workflow agents took on routing and CRM updates"
+    }
+  ],
+  "experience": [
+    {
+      "dates": "2024 — 2026",
+      "role": "Senior AI Workflow Engineer",
+      "company": "OpenTeams",
+      "location": "Austin, TX · Remote",
+      "summary": "Applied AI for go-to-market and revenue operations. Production agents, copilots, and the controls around them.",
+      "bullets": [
+        "Reduced GTM intake handoffs from 5 to 2 by building OpenAI and n8n workflow agents that routed requests, drafted CRM updates, and surfaced blockers for RevOps.",
+        "Orchestrated production workflows across 18 SaaS, CRM, support, and data tools, using Anthropic, OpenAI, webhooks, and queue safeguards so operators worked from current context.",
+        "Replaced manual account handoffs with Gemini-assisted copilots, validation checks, and Slack alerts, returning 34 hours a month to GTM teams.",
+        "Cut approval rework from 7 steps to 3 by codifying AI intake rules, owners, and audit trails for exceptions and renewals.",
+        "Integrated event-driven automations for 11 operational workflows, pairing vector search, structured outputs, and retryable API calls so weekly revenue reviews no longer depended on spreadsheet reconciliation."
+      ],
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "n8n",
+        "RAG",
+        "RevOps"
+      ]
+    },
+    {
+      "dates": "2021 — 2024",
+      "role": "Senior Software Engineer, Workflow Systems",
+      "company": "SumatoSoft",
+      "location": "Boston, MA · Remote",
+      "summary": "Customer workflow services, integration platforms, and the release process around them for SaaS and logistics clients.",
+      "bullets": [
+        "Rebuilt customer workflow services and observability so support teams resolved 420 status checks a quarter with a clear owner and a customer-facing note.",
+        "Shortened prototype-to-production delivery by 22 days with reusable API connectors, automated regression checks, and stakeholder demos.",
+        "Engineered integration services for 9 product and finance systems, using webhook normalization, idempotent jobs, and Postgres audit records to keep billing, entitlement, and support aligned.",
+        "Led discovery with non-technical operators and turned messy handoffs into service boundaries, priorities, and testable contracts.",
+        "Stabilized client portal releases with contract tests and runbooks, preventing about 30 production defects in a quarter."
+      ],
+      "tags": [
+        "APIs",
+        "PostgreSQL",
+        "Webhooks",
+        "Observability",
+        "TypeScript"
+      ]
+    },
+    {
+      "dates": "2019 — 2020",
+      "role": "Software Engineer, Integration Services",
+      "company": "IBM",
+      "location": "Tulsa, OK · On-site",
+      "summary": "Internal integration and reporting workflows for regional service teams.",
+      "bullets": [
+        "Raised data sync reliability by about 40 daily jobs through stronger SQL validation, message replay handling, and deployment checklists.",
+        "Refactored legacy Java services into modules, improving maintainability, code review, and onboarding for distributed teams.",
+        "Delivered API integration for about 12 vendor feeds and standardized payload validation so reporting teams trusted nightly imports."
+      ],
+      "tags": [
+        "Java",
+        "SQL",
+        "APIs",
+        "Integrations"
+      ]
+    },
+    {
+      "dates": "2016 — 2018",
+      "role": "Associate Software Engineer, Platform Tools",
+      "company": "IBM",
+      "location": "Tulsa, OK · On-site",
+      "summary": "Internal platform tools, support utilities, and safer operational releases.",
+      "bullets": [
+        "Built Java utilities, SQL scripts, and user documentation that helped analysts close about 200 support tickets with more consistent troubleshooting.",
+        "Hardened internal web tooling with clearer error handling, peer-reviewed changes, and deployment notes."
+      ],
+      "tags": [
+        "Java",
+        "SQL",
+        "Support tooling"
+      ]
+    },
+    {
+      "dates": "2015",
+      "role": "Software Engineer Intern, Data Tooling",
+      "company": "IBM",
+      "location": "Tulsa, OK · On-site",
+      "summary": "A summer on the data-tooling team, testing, documenting defects, and learning enterprise delivery.",
+      "bullets": [
+        "Supported IBM engineers by testing data-entry tools, documenting defects, and working inside an enterprise delivery process."
+      ],
+      "tags": [
+        "Testing",
+        "Documentation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "dates": "2012 — 2016",
+      "degree": "Bachelor in Information Technology",
+      "school": "University of Belize",
+      "location": "Belmopan, Belize",
+      "notes": "Equivalent to a U.S. bachelor’s degree in computer science. Coursework in software engineering, data science, requirements, data structures, algorithms, and system design."
+    }
+  ],
+  "projectsLead": "Five systems I designed and shipped. Client names and confidential details are left out.",
+  "projects": [
+    {
+      "title": "GTM intake agents that cut the handoff in half",
+      "summary": "OpenAI and n8n agents that route requests, draft CRM updates, and surface blockers before a person has to chase them.",
+      "result": "5 handoffs down to 2 · OpenTeams"
+    },
+    {
+      "title": "One operating picture across 18 tools",
+      "summary": "Production workflows across SaaS, CRM, support, and data tools, with webhooks and queue safeguards so follow-up uses current context.",
+      "result": "18 systems, less copy-paste between them · OpenTeams"
+    },
+    {
+      "title": "Approval paths with an owner and an audit trail",
+      "summary": "AI intake rules, named owners, and an audit trail that shortened exception and renewal reviews.",
+      "result": "7 approval steps down to 3 · OpenTeams"
+    },
+    {
+      "title": "Onboarding workflows support can actually see",
+      "summary": "Rebuilt customer workflow services and observability so a delayed launch has an owner and a customer-facing note.",
+      "result": "420 status checks a quarter, clearly owned · SumatoSoft"
+    },
+    {
+      "title": "Connectors that survive an enterprise launch",
+      "summary": "Webhook normalization, idempotent jobs, and Postgres audit records keeping billing, entitlement, and support aligned.",
+      "result": "9 product and finance systems · SumatoSoft"
+    }
+  ],
+  "expertiseLead": "The tools and practices I use most, grouped by the work they support.",
+  "expertise": [
+    {
+      "title": "AI platforms",
+      "items": [
+        "OpenAI, Claude, Gemini, Llama",
+        "LangChain and LlamaIndex",
+        "RAG and vector search",
+        "Agents, copilots, and tool calling",
+        "Structured outputs and evaluation",
+        "Guardrails and human review"
+      ]
+    },
+    {
+      "title": "Automation",
+      "items": [
+        "n8n, Zapier, Make, Workato",
+        "Workflow orchestration",
+        "Approval flows and task queues",
+        "Exception handling",
+        "Process mapping",
+        "Automation governance"
+      ]
+    },
+    {
+      "title": "Data and APIs",
+      "items": [
+        "Python ETL and SQL modeling",
+        "Airflow, dbt, and Kafka",
+        "REST, GraphQL, and webhooks",
+        "OAuth, JSON Schema, OpenAPI",
+        "Idempotency and rate limits",
+        "PostgreSQL and Redis"
+      ]
+    },
+    {
+      "title": "GTM systems",
+      "items": [
+        "Salesforce and HubSpot",
+        "Gainsight, Zendesk, Intercom",
+        "Outreach and Gong",
+        "Segment and reverse ETL",
+        "Lead routing",
+        "Case triage"
+      ]
+    },
+    {
+      "title": "Cloud and delivery",
+      "items": [
+        "TypeScript, Node.js, React",
+        "FastAPI and Django",
+        "AWS Lambda, ECS, and S3",
+        "Azure Functions and Cloud Run",
+        "Docker, Terraform, GitHub Actions",
+        "IAM, secrets, and CI/CD"
+      ]
+    },
+    {
+      "title": "How teams ship",
+      "items": [
+        "Stakeholder discovery",
+        "Requirements framing",
+        "Observability and runbooks",
+        "Datadog, Grafana, Sentry",
+        "Mentoring and documentation",
+        "Vendor evaluation"
+      ]
+    }
+  ],
+  "principlesLead": "Five habits I bring to an automation project.",
+  "principles": [
+    {
+      "title": "Start from the handoff.",
+      "body": "The useful question is where work stalls between people and tools. A model is only worth adding after that path is clear."
+    },
+    {
+      "title": "Put a name on every step.",
+      "body": "Routing, approval, and exception paths need an owner. If nobody is accountable for a step, it will come back as rework."
+    },
+    {
+      "title": "Keep a person in the loop where judgment matters.",
+      "body": "Drafts, suggestions, and triage are good uses of a model. Decisions that carry risk should stay reviewable."
+    },
+    {
+      "title": "Make failure visible.",
+      "body": "Retries, alerts, and an audit record matter more than a happy-path demo. Operators should see what stalled and why."
+    },
+    {
+      "title": "Leave the next change easier.",
+      "body": "Connectors, contracts, and runbooks are part of the system. The workflow should still be understandable after the first team moves on."
+    }
+  ],
+  "contactLead": "Reach me by email or phone, or download the resume.",
+  "contact": [
+    "I’m focused on AI workflow and operations: agents and copilots that sit inside real GTM, support, and revenue processes, with the review and monitoring to trust them.",
+    "Email is the best way to reach me. If you’re hiring, a short note about the team and the workflow you want to improve is enough to start."
+  ]
+}
