@@ -41,6 +41,7 @@ export function sanitizeContent(input: unknown): Content {
           dates: asString(job.dates),
           role: asString(job.role),
           company: asString(job.company),
+          website: asString(job.website),
           location: asString(job.location),
           summary: asString(job.summary),
           bullets: asStringList(job.bullets),
@@ -119,6 +120,7 @@ export function sanitizeContent(input: unknown): Content {
     phone: asString(source.phone),
     resumeLabel: asString(source.resumeLabel, "Resume (PDF)"),
     resumeHref: asString(source.resumeHref),
+    avatar: safeAvatar(asString(source.avatar)),
     links,
     aboutLead: asString(source.aboutLead),
     about: asStringList(source.about),
@@ -135,10 +137,18 @@ export function sanitizeContent(input: unknown): Content {
     contact: asStringList(source.contact),
   };
 
-  if (JSON.stringify(content).length > 200_000) {
-    throw new Error("Content is too large.");
+  if (JSON.stringify(content).length > 500_000) {
+    throw new Error("Content is too large. Use a smaller avatar image.");
   }
   return content;
+}
+
+function safeAvatar(value: string) {
+  if (!value) return "";
+  if (value.startsWith("data:image/jpeg;base64,") || value.startsWith("data:image/png;base64,") || value.startsWith("data:image/webp;base64,")) {
+    return value.length < 450_000 ? value : "";
+  }
+  return safeHref(value);
 }
 
 export function safeHref(href: string) {

@@ -8,6 +8,7 @@
   "phone": "+1 (213) 529-2003",
   "resumeLabel": "Resume (PDF)",
   "resumeHref": "/Robert-Barrett-Resume.pdf",
+  "avatar": "",
   "links": [],
   "aboutLead": "Nine years turning operational work into software people can run.",
   "about": [
@@ -38,6 +39,7 @@
       "dates": "2024 — 2026",
       "role": "Senior AI Workflow Engineer",
       "company": "OpenTeams",
+      "website": "https://openteams.com",
       "location": "Austin, TX · Remote",
       "summary": "Applied AI for go-to-market and revenue operations. Production agents, copilots, and the controls around them.",
       "bullets": [
@@ -60,6 +62,7 @@
       "dates": "2021 — 2024",
       "role": "Senior Software Engineer, Workflow Systems",
       "company": "SumatoSoft",
+      "website": "https://sumatosoft.com",
       "location": "Boston, MA · Remote",
       "summary": "Customer workflow services, integration platforms, and the release process around them for SaaS and logistics clients.",
       "bullets": [
@@ -81,6 +84,7 @@
       "dates": "2019 — 2020",
       "role": "Software Engineer, Integration Services",
       "company": "IBM",
+      "website": "https://www.ibm.com",
       "location": "Tulsa, OK · On-site",
       "summary": "Internal integration and reporting workflows for regional service teams.",
       "bullets": [
@@ -99,6 +103,7 @@
       "dates": "2016 — 2018",
       "role": "Associate Software Engineer, Platform Tools",
       "company": "IBM",
+      "website": "https://www.ibm.com",
       "location": "Tulsa, OK · On-site",
       "summary": "Internal platform tools, support utilities, and safer operational releases.",
       "bullets": [
@@ -115,6 +120,7 @@
       "dates": "2015",
       "role": "Software Engineer Intern, Data Tooling",
       "company": "IBM",
+      "website": "https://www.ibm.com",
       "location": "Tulsa, OK · On-site",
       "summary": "A summer on the data-tooling team, testing, documenting defects, and learning enterprise delivery.",
       "bullets": [

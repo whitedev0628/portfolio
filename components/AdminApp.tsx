@@ -7,11 +7,81 @@ const emptyJob = (): Job => ({
   dates: "",
   role: "",
   company: "",
+  website: "",
   location: "",
   summary: "",
   bullets: [],
   tags: [],
 });
+
+function AvatarField({ avatar, onChange }: { avatar: string; onChange: (avatar: string) => void }) {
+  const [reading, setReading] = useState(false);
+
+  async function onFile(file: File | undefined) {
+    if (!file) return;
+    setReading(true);
+    try {
+      onChange(await compressImage(file));
+    } finally {
+      setReading(false);
+    }
+  }
+
+  return (
+    <div className="item avatar-field">
+      <div className="avatar-preview">
+        {avatar ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={avatar} alt="" />
+        ) : (
+          <span>No photo</span>
+        )}
+      </div>
+      <label>
+        Upload avatar
+        <input
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          onChange={(event) => onFile(event.target.files?.[0])}
+        />
+      </label>
+      {reading ? <p className="msg">Preparing image…</p> : null}
+      {avatar ? (
+        <button className="ghost" type="button" onClick={() => onChange("")}>
+          Remove avatar
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
+function compressImage(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const image = new Image();
+    const url = URL.createObjectURL(file);
+    image.onload = () => {
+      const max = 640;
+      const scale = Math.min(1, max / Math.max(image.width, image.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(image.width * scale));
+      canvas.height = Math.max(1, Math.round(image.height * scale));
+      const context = canvas.getContext("2d");
+      if (!context) {
+        URL.revokeObjectURL(url);
+        reject(new Error("Could not read that image."));
+        return;
+      }
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      resolve(canvas.toDataURL("image/jpeg", 0.82));
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("Could not read that image."));
+    };
+    image.src = url;
+  });
+}
 
 function Field({
   label,
@@ -153,7 +223,13 @@ export default function AdminApp() {
           <Field label="Phone" value={content.phone} onChange={(phone) => patch({ phone })} />
           <Field label="Resume label" value={content.resumeLabel} onChange={(resumeLabel) => patch({ resumeLabel })} />
           <Field label="Resume link" value={content.resumeHref} onChange={(resumeHref) => patch({ resumeHref })} />
+          <Field
+            label="Avatar image URL"
+            value={content.avatar.startsWith("data:") ? "" : content.avatar}
+            onChange={(avatar) => patch({ avatar })}
+          />
         </div>
+        <AvatarField avatar={content.avatar} onChange={(avatar) => patch({ avatar })} />
         <div className="item">
           <Field label="Intro" value={content.headline} onChange={(headline) => patch({ headline })} multiline />
         </div>
@@ -381,6 +457,7 @@ function JobFields({ job, onChange, onRemove }: { job: Job; onChange: (job: Job)
         <Field label="Location" value={job.location} onChange={(location) => onChange({ ...job, location })} />
         <Field label="Role" value={job.role} onChange={(role) => onChange({ ...job, role })} />
         <Field label="Company" value={job.company} onChange={(company) => onChange({ ...job, company })} />
+        <Field label="Company website" value={job.website} onChange={(website) => onChange({ ...job, website })} />
       </div>
       <Field label="Summary" value={job.summary} onChange={(summary) => onChange({ ...job, summary })} multiline />
       <Field

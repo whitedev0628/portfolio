@@ -7,6 +7,7 @@ export type Job = {
   dates: string;
   role: string;
   company: string;
+  website: string;
   location: string;
   summary: string;
   bullets: string[];
@@ -52,6 +53,7 @@ export type Content = {
   phone: string;
   resumeLabel: string;
   resumeHref: string;
+  avatar: string;
   links: ExternalLink[];
   aboutLead: string;
   about: string[];
